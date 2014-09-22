@@ -12,7 +12,7 @@ player createDiarySubject ["illegalitems","Illegal Activity"];
 //player createDiarySubject ["terrorrules","Terrorism Rules"];
 player createDiarySubject ["controls","Controls"];
 player createDiarySubject ["ozzyfeatures","UNIQUE Features"];
-
+player createDiarySubject ["Fine","FINES"];
 /*  Example
 	player createDiaryRecord ["", //Container
 		[
@@ -337,7 +337,8 @@ player createDiarySubject ["ozzyfeatures","UNIQUE Features"];
 			"Aviation",
 				"
 				1. No helicopter can land within city limits without authorization from the highest ranking officer online. (Exceptions being what is listed below.)<br/>
-				Kavala: The hospital helipad (037129) or docks (031128).<br/>
+				Kavala: The hospital helipad (037129) [EXCEPTION IF THERE IS A MEDIC ONLINE CIVS MAY NOT LAND AT HOSPTIAL]
+				Kavala: docks (031128).<br/>
 				Athira: The sports field (138185) or behind the DMV (140188).<br/>
 				Pyrgos: The fields North/East of DMV (170127)<br/>
 				Sofia: Opposite the car shop (258214) or the fields Southeast of the garage (257212)<br/>
@@ -345,8 +346,9 @@ player createDiarySubject ["ozzyfeatures","UNIQUE Features"];
 				
 				2. Helicopters may not land on roads.<br/>
 				3. Police may temporarily forbid landing at  but it cannot remain closed for a long period of time.<br/>
-				4. Helicopters cannot fly below 150m over the city without authorization.<br/>
-				5. Helicopters cannot hover over the city. Cops may only hover over the city if there is an active police operation going on.<br/><br/>
+				4. Helicopters cannot fly below 300m over the city without authorization.<br/>
+				5. Helicopters cannot hover over the city. Cops may only hover over the city if there is an active police operation going on.<br/>
+				6.    <br/><br/>
 
 				"
 		]
@@ -411,7 +413,7 @@ player createDiarySubject ["ozzyfeatures","UNIQUE Features"];
 				4. Any vehicle that hasn't moved in a significant amount of time may be impounded.<br/>
 				5. Impounding is an essential job for a cop, it helps keep the server clean and less laggy.<br/>
 				6. If in doubt, always search the vehicle and message the owner(s) before impounding.<br/>
-				7. Police speedboats or Hunter HMGs may be used to assist in apprehending criminals. The weapon should be used to disable vehicles, not to blow them up.<br/><br/>
+				<br/><br/>
 				"
 		]
 	];
@@ -446,30 +448,6 @@ player createDiarySubject ["ozzyfeatures","UNIQUE Features"];
 		]
 	];
 	
-	player createDiaryRecord ["policerules",
-		[
-			"Arresting and Ticketing",
-				"
-				Arresting should be done to criminals who are considered a danger to themselves or others.<br/><br/>
-
-				1. You may not arrest someone if you have given them a ticket and they paid it.<br/>
-				2. You must tell the suspect why they are being arrested before you arrest them.<br/>
-				3. If a civilian is wanted, you may arrest them. Do not kill them, unless the situation falls under the 'Use of Lethal Force' section.<br/><br/>
-
-
-				Ticketing a civilian is considered a warning for the civilian. If they break a law, but do not pose a threat to anyone, you may ticket a civilian.<br/><br/>
-
-				1. Tickets must be a reasonable price.<br/>
-				2. Ticket prices should be based off of the crimes committed.<br/>
-				3. Refusal to pay a legit ticket is grounds for arrest.<br/>
-				4. Giving a civilian and illegitimate ticket, such as $100k for speeding, etc., is not allowed and will result in your removal from the police department.<br/><br/>
-				
-				A complete list of all crimes and the appropriate punishments should be given to officers during training. If in doubt, or if you have not been trained, ask a higher ranking officer what to do.<br/><br/>
-				
-				The list is available at crime.sealteamsloth.com<br/><br/>
-				"
-		]
-	];
 		
 	player createDiaryRecord ["policerules",
 		[
@@ -537,13 +515,17 @@ player createDiarySubject ["ozzyfeatures","UNIQUE Features"];
 				The highest ranking officer on duty is in charge of the police force outside of admins currently online. The high ranking officer is expected to follow the rules and guidelines of his/her rank, and must report to the admin in case any action need be taken.<br/><br/>
 
 				Police Chain of Command:<br/>
-				1. Commander<br/>
-				2. Captain<br/>
-				3. Lieutenant<br/>
-				4. Sergeant<br/>
-				5. Senior Patrol Officer<br/>
-				6. Patrol Officer<br/>
-				7. Cadet<br/><br/>
+				1. Chief <br/>
+				2. Deputy Chief<br/>
+				3. Inspector<br/>
+				4. Captain<br/>
+				5. Second Lieutenant<br/>
+				6. Lieutenant<br/>
+				7. Senior Sergeant<br/>
+				8. Sergeant <br/>
+				9. Senior Constable<br/>
+				10. Constable<br/>	
+				11. Cadet<br/><br/>
 
 				Cops in game who are not enrolled/accepted into the SPD are the lowest tier and have no say in police operations.<br/><br/>
 				"
@@ -649,7 +631,147 @@ player createDiarySubject ["ozzyfeatures","UNIQUE Features"];
 				"
 		]
 	];
+			
+	player createDiaryRecord ["FINES",
+		[
+		"Illegal Activities","
+			Unlicensed Weapons =  <br/>
+			$2000 and confiscation of weapons
+			<br/><br/>
+			
+			Trespassing =
+			Players House = $1500
+			Government Land = $3000
+			(Government land is places that would logically be owned by the government)
+			
+			Disrespecting a Police Officer =
+			$1000 
+			(Third Offence will result in jail)
 
+			Obstruction of Justice level 1 =
+			(Getting in the way of cops)
+			$1000
+			
+			Obstruction of Justice Level 2 = 
+			(Attacking Police to help your friends)
+			$3000 and jail
+	
+			Trolling Police (Openly trying to get attention and intentionally pissing off the cops)
+			$5000
+
+			Attempted Murder =
+			$10,000 And Jail
+			
+			Murder =
+			$20,000 And Jail
+			
+			Discharging a weapon in public areas =
+			$12000
+			
+			Robbery of a citizen =
+			$8000 and Jail
+
+			Organ Harvesting =
+			$65000 and Jail
+			Second Offence will be death by firing squad
+
+			Drug Trafficking
+			Dealer Identifies you as Trafficking Contraband = 
+			$5000 per person and Impounding of (possible) vehicle  
+			
+			
+			Possession of Contraband (Drugs, Uranium etc) = 
+			Half of seized Contraband value
+			
+			
+			
+
+		"			
+		]
+	];
+	
+	player createDiaryRecord ["FINES",
+		[
+		"Vehicles","
+		
+		
+			Driving Without a license = <br/>
+			$1000 and impound of vehicle,<br/>
+			(Third Offence will result in destruction of vehicle)<br/><br/>
+			
+			Driving of Go-Karts <br/>
+			Illegal except for Go-Kart track at airstrip <br/>
+			$7500<br/>
+			(Third Offence will result in destruction of vehicle)<br/><br/>
+			
+			Illegal parking=<br/>
+			$750<br/><br/>
+			
+			reckless driving= <br/>
+			$1500 <br/><br/>	
+		"
+		]
+	]:
+	
+	player createDiaryRecord ["FINES",
+		[
+		"Aviation","
+		
+			Landing Inside City limits without permission =
+			$10,000 and impound of vehicle
+			
+			Refusing to Leave Kavala Airspace =
+			$50,000 and impound of vehicle
+			[AFTER 2 WARNINGS FROM COPS VIA TEXT MESSAGE ]
+		"
+		]
+	];
+	player createDiaryRecord ["FINES",
+		[
+		"Rebel Activities","
+			Illegal Vehicles <br/>
+			(All Rebel Vehicles) <br/>
+			$15,000	(All rebel vehicles will be impounded)(Third Case will result in destruction of vehicle)<br/><br/>
+			
+			Robbery of the federal reserve=
+			$25000 and Jail
+
+			Accomplice of Federal Reserve robbery=
+			$10000 and Jail
+
+			Assault on a town =
+			$100000 and Jail for all persons involved
+
+			
+		"
+		]
+	];
+	player createDiaryRecord ["FINES",
+	[
+		"Fines Procedure","
+				
+				Arresting should be done to criminals who are considered a danger to themselves or others.<br/><br/>
+
+				1. You may not arrest someone if you have given them a ticket and they paid it.<br/>
+				2. You must tell the suspect why they are being arrested before you arrest them.<br/>
+				3. If a civilian is wanted, you may arrest them. Do not kill them, unless the situation falls under the 'Use of Lethal Force' section.<br/><br/>
+
+
+				Ticketing a civilian is considered a warning for the civilian. If they break a law, but do not pose a threat to anyone, you may ticket a civilian.<br/><br/>
+
+				1. Tickets must be a reasonable price.<br/>
+				2. Ticket prices should be based off of the crimes committed.<br/>
+				3. Refusal to pay a legit ticket is grounds for arrest.<br/>
+				4. Giving a civilian and illegitimate ticket, such as $100k for speeding, etc., is not allowed and will result in your removal from the police department.<br/><br/>
+				
+				A complete list of all crimes and the appropriate punishments should be given to officers during training. If in doubt, or if you have not been trained, ask a higher ranking officer what to do.<br/><br/>
+				
+				The list is available at crime.sealteamsloth.com<br/><br/>
+				"
+		"
+		]
+	];
+	
 	
 // Controls Section
 
